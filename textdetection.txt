@@ -1,0 +1,85 @@
+Text Detection Overflow:
+
+    predicting and localising the text instances
+
+            1. Image with text ---> 2. Preprocessing ---> 3. Segmentation
+    
+                1. Image with text :
+
+                    can be any document like jpeg, pdf , png, or any other readable image format
+
+                2. Preprocessing :
+
+                    we remove the noise from image using the following techniques so that we remove the unwanted 
+                    distortion in the images and enhance the important features.
+                    
+                        Binarisation:
+                        
+                        It is a process of converting color image to grayscale.
+                        
+                        Thresholding:
+                        
+                        It is used to isolate an object or other element information im the image.
+                        threshhold limits are set for objects to isolate.
+
+                        if the lighting conditions are not good may not return the expected results.
+                        so we use adaptive threshholding. 
+
+                        if the image is bimodal, 
+                        then we use otsu binarisation with gaussian blur as otsu binarisation automatically
+                        calculates the threshold value from image histogram in bimodal image.
+                    
+                        rescaling:
+
+                        we either shrinking the image using inter_area or enlarging the image using inter_linear 
+                        or inter_cubic so that we can recognize the smaller object in the image. 
+
+
+                        Noise Removal:
+
+                        There are many noise removal techniques to process the image.
+
+                            Morphology:
+
+                                set of operations based on Predefined structuring elements called as kernels.
+                                The value of the each pixel in the output image based on the comparision of the
+                                corresponding pixel in the input image with its neighbours.
+                                By choosing the size of the kernel, we can construct a morphological operation
+                                that is sensitive to specific shapes regarding the input image. The pixels added 
+                                or removed depend on the size and shape of the kernel.
+
+
+                        
+                            Small Dots:
+                                Also called as small noise, comes during scanning due to low clarity camera or a 
+                                shadow on image. this can be removed by finding contours and filter using contour area.
+
+
+                            Image Blurring:
+
+                                Image blurring is achieved by convolving the image with low-pass filter kernel. 
+                                There are many filters. such as 
+                                1. gaussian blurring 
+                                2. bilateral filtering
+
+    
+                            Dilation/Erosion:
+
+                                Dilation: 
+                                Which removes pixels from the boundaries of the object in an image so all the pixels
+                                near the boundary will be discarded depending upon the size of kernel and the thickness
+                                or simply white 
+
+                            Deskewing:
+
+                            Orientation:
+
+                            Perspective Transormation:
+
+                            Borders:
+
+                    
+
+                3.  Segmentation:
+
+                    we now segment the image so that we detect the text content easily. 

@@ -1,0 +1,160 @@
+Image classification:
+
+    Multi-class classification: 
+        binary classification
+            The image will have single class associated with it.
+            The classifier will tell you which class it is.
+
+    Multi-label classification:
+
+        Where your model can tell multiple things in the image.
+
+
+Object Localization:
+
+    We may not just want what the object in the image, we also want where exactly it is in the image.
+
+
+    So identifying the object and locating where it is in the image is a classification plus object 
+    Localization.
+
+
+Object detection:
+
+    Combining Multi-label classification and Localization gives you object detection.
+
+    For each object:
+        confidence scores
+        bounding boxes
+    
+    popular algorithms:
+
+        R-CNN           region based CNN
+        Faster R-CNN    
+        YOLO            You only look once
+        SSD             single shot detector
+    
+
+Image segmentaion:
+
+    Instead of locating the object within a bounding box, segmentaion figures out the pixels 
+    that make up the object.
+
+    Types:
+
+        semantic segmentaion    all objects of same type form a single classification
+            same class - one segment
+            Each pixel is associated with one class
+                all persons in an image are treated as one segment
+            popular models are:
+                FCNN    fully convolutional neural networks
+                U-NET 
+                DeepLab  
+
+        instance segmentaion    even objects of same type treated as different objects
+            multiple instances of same class are seperate segments
+            popular models are:
+                MASK R-CNN
+
+
+
+Transfer Learning:
+
+    pre trained model reused for solving downstream task.
+    reuse weights and layers
+    Example : Pre-trained MobileNetV2 
+
+    Approaches to Transfer Learning:
+
+        Freeze the weights: 
+            freeze the weights that have been Transfered from pre-trained model.
+
+            we can take the pre-existing weights from a number of layers from the original model.
+            The layers are typically convolutional layers close to the input image.
+            because, the layers close to input image learn lower level and more generalisable features
+            compared to the layers come later. 
+
+            Here we train only the dense layers rather than traning from scratch.
+
+        Train with learned values as default:
+
+            We use transfered weights as the starting points, and we want to tweak the weights even further
+            to tailor them to our specific dataset and task.
+
+            Here we train entire model with transfered weights used to initialize the weights.
+
+
+
+CNN Archtecture:
+                                                                                                            (Regression)
+                                                                                                            bounding box   
+                                                                                                           /
+        Imput Image -->  Conv1 --> Pool --> ....... --> Conv n --> Pool n --> Flatten --> Dense Layers -->    
+                                                                                                           \
+                                                                                                                Class
+                                                                                                            (N-way softmax)
+
+        As we can see in the image,  The output are bounding boxes and class of the object detected
+
+
+
+Object Detection and sliding windows:
+
+        A sliding window is passed over the image to detect the object and gives you the location of the object.
+
+        but, you will end up multiple boxes detecting the same object.
+
+        Here, we have to combine the multiple boxes into one bounding box for one object.
+
+        One way to evaluate how close the predicted bounding box is to the true one is called 
+            IOU(Intersection over Union)
+        So, the box with highest IOU is the candidate and we can reject other boxes.
+        this selection box with highest IOU is called NMS(non max suppression)
+
+
+        R-CNN:
+
+            1.input image --->  extract region proposals (~2k)  --> compute CNN features --->  Classify regions
+
+
+            1.  it takes the input image
+            2.  It extracts the region proposals. Each region proposal is a group of smaller segments using the 
+                selective search method. the model proposes about 2000 of these regions.
+            3.  The model extracts features from these 2000 region proposals using a pretrained CNN like alexnet 
+                in our case.
+                In order to adjust each region to fit as the input to the R-CNN, we work the image dimensions to 
+                alexnet input dimensions. These regions are called warped regions.
+            4.  To classify the regions, The R-CNN uses SVMs as opposed to Dense layers
+
+
+            Transfer Learning is used to pretrain the CNN section of the RCNN model then fine tune that model to 
+            this specific task.
+
+            First, the researchers identified a large auxilary area set for pre training. And the word auxiliary 
+            here means to provide additional help. 
+
+            So the pre training auxiliary task is helping the model to perform its domain specific task better. An 
+            interesting thing to note is that the images in the auxiliary Data Set are not warped, like the region 
+            proposals used in this object detection task. 
+
+            These images also don't have bounding box labels, but the auxiliary data can still be used for 
+            pre-training, even when it's different than the data that's used for the desired domain specific task. 
+
+            The auxiliary data can help the model learn generally useful feature extraction, if it's a large data set. 
+
+            So pre-training is normally performed on very large data sets, even if there are different classes or 
+            different formats than the actual final task that we want to perform.
+
+
+
+            After pre-training, the CNN layers are fine tuned on the domain specific task, which is the object 
+            detection task that we're trying to solve. The researchers fine tune the model on warped region proposals. 
+           
+            And this is a smaller data set, but specific to the task that we're trying to perform with object detection.
+
+
+
+        
+
+
+

@@ -1,0 +1,210 @@
+
+Inferential Statistics:
+
+
+
+    It is about using limited sample from a population to make inferences about the entire population.
+
+    It is not about just describing some population parameter or some aspect of the population we are
+    interested in, We use sample Statistic to decide something about the population parameter.
+
+    To do this (ie., to decide something about the population parameter), we specify Statistical 
+    hypothesis about the population.
+
+                A null hypothesis.
+                Alternative hypothesis
+
+    1. Why we need Null hypothesis:
+
+
+    For example, you want to test whether having a better diet makes person healthier or not, you take
+    some people and them on diet for some days and compare them with people who are not on diet.
+
+    let us say the comparision is made on some health index (health_idx).
+
+
+    lets say the differene between the mean of health_idx of people_with_diet and people_with_nodiet is 1.12,
+
+    why can't we say there is a real effective diet on population.
+
+        No we can not say, because the result may have of chance.
+
+            ie., The true differene may be over or under estimated because the samples are not perfectly precise
+            representation of the population.
+
+            so we have to take the chance into account. 
+
+            if our sample Statistic is less precise, our decision has a larger probability of being incorrect.
+
+        We introduce probability by asking, If we were to sample indefinitely.
+        
+            Here we have to find the distribution of of sample Statistic. if we know the distribution we can
+            determine probabilities and the shape of the distribution is determined by the type of Statistic 
+            we are interested in.
+
+
+        1.  proporions.
+        2.  means.
+        3.  diffrences between two means.
+        4.  diffrences between more than two means.
+
+            they are all associated with diffrently shaped distributions.
+            the shape is also effected by the sample size and variation in population.
+
+            by dividing the sample Statistic in standard error to correct for variation in sample size.
+
+            Now, sample is turned into standardised probability distribution.
+
+            Based on the sample difference 1.12 in our example,
+              we feel that the probability that the true population difference favoring a raw diet exists is 0.32.
+            
+            unfortunately above one is wrong because we cant calculate the probability in that way.
+
+
+            **** we know the location of the sample probability distribution,
+                 but we dont know the location(mean) of population probability distribution.
+                 
+                Now we have to make assumptions about the exact location of the population.
+                
+                If X is the location of population probability distribution,
+            and 1.12 is the location of the sample probability distribution,
+                then x can assume any value. but its not we want. we have pin down the location.
+
+                the best possible way is to there is now difference in the location of the sample and population.
+
+                H0 = u1 - u2 =0     hopefully unlikely
+                Ha = u1 - u2 <0 
+                     u1 - u2 >0
+                     u1 - u2 != 0 
+
+                
+                Thus we need null hypothesis to determine the locatin of the test Statistic distribution and 
+                calculate the probabilities.
+                
+
+
+    2. P-value:
+
+            Once we specify the null- hypothesis and Alternative hypothesis, we will calculate the p-value.
+
+            This is the probability that we will find the same test Statistic in the probability distribution.
+
+            we have to use p-value together with signifcance level α) to see if we can reject the null hypothesis.
+
+
+            test Statistic =  (x - u)/sigma
+
+                    Ha = u1 - u2 <0         we look for p-value in left extreme     one-tailed test
+                         u1 - u2 >0         we look for p-value in right extreme    one-tailed test
+                         u1 - u2 != 0       we look for p-value in right extreme    one-tailed test
+
+
+
+           **** But always remember    P low Null Go (reject null)    
+                                       P High Null Fly (Fail to Reject null)
+
+
+            Remember : P-value is compared with significance level.
+    
+    3. Confidence Intervals:
+
+
+            We have understood that using p-value along with level of significance,
+                we can either reject or fail to reject the null hypothesis.
+
+
+            -----> But, Every small effects will become statistically significant, if sample size is very large.
+                    Such small effects are of little importance.
+
+                Practical signifcance is very hard to tell just by looking at the test Statistic and p-value.
+
+            Another way to draw statistical inferences is to use the interval estimates.
+
+            This interval tells you about the range of plausible values around the test statistic.
+
+            A Confidence interval with a 95% Confidence level answers the following question.
+
+            If I were to draw a sample repeatedlu and calculate the test statistic, what is the reange of values
+            around the statistic if i want the true population parameter to lie with this interval in 95% of samples.
+
+
+            for example: If we take 100 samples , 95 sample will cotain the population parameter.
+
+    
+            With test, the interval is centered around the expected test statistic value under the null hypothesis.
+
+            with Confidence interval, its centered around the sample statistic value.ð
+
+
+    4. Power of test Statistics:
+
+
+            power refers to probability of correctly rejecting the null hypothesis.
+            It is the probability to detect hypothesised effect, if it truly exists in the population.
+
+
+                                                H0              
+                                   Not Rejected        Rejected
+                                          
+                        True            _/              Type-I error        (alpha)
+                                    (1-alpha)           (False Positive)    
+                H0
+
+                        False        Type-II Error           _/
+                                    (False Negatives)       (1-beta)
+                                         (beta)   
+
+
+            The probability of type-I Error, ie.,falsely rejecting the null hypothesis, is equivalent to 
+            signifcance level alpha, usally set at 0.05.
+
+            (1- alpha)  is the probability of correctly failing to reject the null hypothesis.
+
+            (beta) is the probability of falsely failing to reject the null hypothesis.
+
+            (1-beta) called the power of test statistic.
+
+
+            But we cant visualise the probability as an area under the test statistic distribution where alpha
+            falls under.
+            Because, null-hypothesis and Alternative-hypothesis make different distributions.
+
+
+            we can relate alpha and beta as follows...
+
+                If we decrease alpha , then beta increases.  
+
+                if we are willing to accept a larger probability of making type-I Error,
+                    we have more power ie., more 1-beta value
+            
+            We have other ways of increasing the power,
+
+                More observations or less variance in the population,will result in more power.
+                because the Confidence interval become narrower.
+
+            
+                Also, one-tailed test has more power than two-tailed test.
+
+
+    
+    Comparing two-independent groups:
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+        
+
+

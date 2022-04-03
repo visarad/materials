@@ -1,0 +1,76 @@
+Custom Models, Layers, and Loss Functions with TensorFlow:
+
+    Functional API:
+        what is the need for it?
+
+            In Sequential API we know that, we define a model architecture using Sequential which contains
+            a list of layer definitions.
+
+            the Sequential returns a model object of the architecture.
+            The Sequential api as well as parallel can not be used for splitting and Concatenating as well as 
+            multiple inputs and outputs
+
+        
+
+        Creating Functional API:
+
+            1.  Explicitly define input to the model which not there in Sequential API
+            2.  Define a set of interconnected layers on the input using python Functional syntax.
+                    In Functional syntax, current layer is a function and previous layer is a parameter 
+                    to the function.
+            3.  Define the model using input and output layers.
+
+
+            example code is shown below:
+
+                from tensorflow.keras.layers import Input,Dense,Flatten
+                from tensorflow.keras.models import Model
+
+
+
+                input = Input(shape=(28,28))
+                x = Flatten()(input)
+                x = Dense(128,activation='relu')(x)
+                predictions = Dense(10,activation="softmax")(x)
+
+                model = Model(inputs=input, outputs=predictions)
+
+
+                The takes parameters inputs and outputs which are plural. It means the model expects multiple
+                inputs and multiple outputs.
+            
+                model = Model(inputs=[input1minput2], outputs=[output1,output2])
+            
+
+            Branched Models:
+
+                Branched Models, where instead of each layer following another layer in a linear stack, you can 
+                split the model into different paths and merge them together later.
+
+                example:
+
+                    layer1 = Dense(32)
+                    layer2_1 = Dense(32)(layer1)
+                    layer2_2 = Dense(32)(layer1)
+                    layer2_3 = Dense(32)(layer1)
+                    layer2_4 = Dense(32)(layer1)
+
+                    merge = Concatenate([layer2_1,layer2_2,layer2_3,layer2_4])
+
+                                                    l  a  y  e  r  1
+                                               /       /     \           \
+                                              /       /       \           \
+                                             /       /         \           \
+                                            /       /           \           \ 
+                                           /       /             \           \
+                                      layer2_1  layer2_2       layer2_3    layer2_4 
+                                          \        \             /          /
+                                           \        \           /          /
+                                            \        \         /          /
+                                             \        \       /          /
+                                                    M   e   r   g   e
+
+                
+            Creating multiple output model:
+
+                    

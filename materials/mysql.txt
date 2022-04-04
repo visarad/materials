@@ -1,0 +1,45 @@
+To connect to mysql server:
+
+    command :  mysql -u root -p 
+    asks for password 
+
+
+1.  To create database:
+        create DATABASE click_store
+
+2.  To show databases:
+        show databases
+
+3.  To delete/drop database:
+        drop database click_store
+        we cant use drop click_store    call to database should be Explicit
+
+4. Running sql command from a soruce file :
+
+    write sql commands in a file and save the file with .sql extension 
+
+    use:    source  sample.sql 
+
+    above will execute all the sql commands written in the file.
+
+
+5. To select a particular database of all the existing databases:
+
+    use employee;
+    select database();
+
+
+6.  creating a table:
+
+    create table staff(
+    name varchar(30),
+    id  int
+    );
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+Hypothesis tests:
+
+                                                        |One sample Z test
+                                    ___________         |One sample t test
+                    |--------------| One sample| -------|One proportion test
+                    |               -----------         |Once variance test
+                    |
+                    |
+                    |               ___________         |Two sample z test
+                    |--------------|Two samples| -------|two sample t test
+                    |               -----------         |paired t test
+        Tests ------|                                   |Two proportions t test
+                    |                                   |Two vairances 
+                    |
+                    |               ____________
+                    |--------------| More than  |
+                                   | two samples| ------| ANOVA
+                                    ------------
+
+
+
+
+
+
+
+One sample Z-test:
+
+    Conditions:

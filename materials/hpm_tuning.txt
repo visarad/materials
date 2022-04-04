@@ -1,0 +1,60 @@
+Parameters and hyper Parameters:
+
+    The objective of typical learning algorithm is to find a function f that minimizes a certain loss
+    over a data set.
+
+                learning algorithm
+        DATASET ----------------->  function f
+                Loss Minimization
+
+    The learning algorithm produces f through the optimization of a training criterion with respect to
+    a set of Parameters.
+
+    For Linear regression
+
+        beta, the coefficients of the Linear function, are the Parameters to find or optimize by algorithm.
+
+    For Decision tree
+
+        The variable, the split value, the height in the tree.
+
+    For neural network 
+
+        The weights of neurons in each layer.
+
+    
+Hyper Parameters in ML models:
+
+    Hyper Parameters are Parameters that are not directly learnt by algorithm.
+    Hyper Parameters are specified outside the training procedure.
+    Hyper Parameters control the capacity of the model, i.e., how flexible is the model to fit the data.
+    They prevent overfitting.
+
+
+    Vanilla Linear regression                   No hyper Parameters
+    
+    Regularised Linear regression               The Regularization methods are
+                                                    Lasso
+                                                    Ridge
+                                                    Elastic net  (combination of both)
+                                                    The Regularization penalty is lambda
+    
+    Decision tree                               The metrics to measure the quality of the split
+                                                The number of features to evaluate at each node
+                                                The depth of the tree
+                                                The minimum number of samples to split the data further
+
+    Random Forests and GBMs                     Number of trees (or Estimators)
+                                                Learning rates (GBMs)
+
+    Neural Networks                             Number of layers
+                                                Number of neurons per layer
+                                                The activation function
+                                                The drop out rate
+
+    Nearest neighbours                          the number of neighbours.
+
+    Support Vector Machines                     The kernel function.                                        
+                                                
+
+Hyper Parameter Optimization:

@@ -73,4 +73,22 @@ Custom Models, Layers, and Loss Functions with TensorFlow:
                 
             Creating multiple output model:
 
-                    
+
+
+
+Complex architectures with Functional APIs:
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

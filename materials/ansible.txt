@@ -1,0 +1,48 @@
+What is ansible:
+
+    It is an IT automation and configuration management tool.
+
+    use case:   If you have a tool say nginx in 100 computers. It is very difficult to install one by one
+                Instead you create a config file and provision in all systems in single go.
+
+
+what is configuration management?:
+
+    It is a process of maintaining computer systems, servers, and software in a desired and consistant state.
+
+
+Ansible architecture:
+
+
+        Components:
+
+
+        users                      public/private                   CMDB
+        |   |                           cloud             ____________|  
+        |   |                              |             |            
+        |   |                              V             V            
+        |   |                       |-----------------------|        
+        |   |----------------->     |            |          |    
+        |                           |  inventory | Modules  | -------------->   Hosts
+        |                           |  ---------  --------- |
+        v                           |            |          |           
+    Ansible playbook --------->     |     API    | Plugins  | -------------->   Networking  
+                                    |-----------------------|    
+
+                                   Ansible orchestration engine 
+
+
+Control node:
+
+    Any machine with ansible isntalled is a control node. 
+    we can run ansible commands and playbooks from the control nodes.
+    We can not use windows as control node.
+    we can have multiple nodes as control nodes.
+
+
+
+Control node setup:
+
+    It is a master node which controls the worker nodes
+
+    

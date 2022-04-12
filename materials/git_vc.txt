@@ -108,8 +108,6 @@ Creating a Repository:
 
                 git checkout -b hr          creates and moves to new branch
                 
-<<<<<<< HEAD
-=======
             deleting a branch
 
                 git branch -d hr    deletes the branch
@@ -126,10 +124,6 @@ Creating a Repository:
             .   Regular merge
 
             
-
->>>>>>> master
-
-
         
 
 

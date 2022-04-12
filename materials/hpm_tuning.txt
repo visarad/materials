@@ -1,5 +1,13 @@
 Parameters and hyper Parameters:
 
+
+            Parameters                              Hyper Parameters
+
+        Intrinsic to model equation             Defined before training
+        Optimized during training               Constrain the algorithm
+
+
+
     The objective of typical learning algorithm is to find a function f that minimizes a certain loss
     over a data set.
 
@@ -44,8 +52,14 @@ Hyper Parameters in ML models:
                                                 The depth of the tree
                                                 The minimum number of samples to split the data further
 
+
     Random Forests and GBMs                     Number of trees (or Estimators)
+                                                The depth of the tree
                                                 Learning rates (GBMs)
+                                                The metric of split quality
+                                                The number of features to evaluate at each node
+                                                The minimum number of samples to split the data further
+
 
     Neural Networks                             Number of layers
                                                 Number of neurons per layer
@@ -58,3 +72,59 @@ Hyper Parameters in ML models:
                                                 
 
 Hyper Parameter Optimization:
+
+    The process of finding best hyper Parameters for a given dataset is called hyper Parameter optimization
+    or hyper Parameter tuning.
+
+    It is a method to choose hyper Parameters that minimize generalisation error.
+
+    How do we find the hyper Parameter combinations to maximise performance while diminishing computational costs?.
+
+    Different hyper Parameter optimisation strategies.
+
+        Methods:
+
+        Manual Search
+        Grid Search
+        Random Search
+        Bayesian Optimization
+        Others
+
+        A search consists of :
+
+            HyperParameter Space
+            A method for sampling candidate HyperParameters
+            A cross validation scheme
+            A performance metric to minimize (or maximise)
+
+        Respose surface :
+
+            Algorithm
+            HyperParameters
+            Dataset
+            Metric
+
+
+Performance Metrics:
+
+    Classification metrics
+    Regression Metrics
+    Metrics in sklearn 
+    Creating our own metrics
+
+
+    Classification Metrics:
+
+        Dependent of Probability Thresh hold
+            Accuracy
+            Precision, Recall, F-score
+            FPR,FNR
+        Independent of Probability Thresh hold
+            ROC-AUC
+
+
+            Accuracy    =   no of correct predictions/total number of predictions
+
+            
+
+

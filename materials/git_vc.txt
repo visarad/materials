@@ -1,0 +1,41 @@
+Version control:
+
+    It keeps the track of changes in the source code so that you can revert to the earlier versions later.
+    It generally means if you screw up files or lose them you can easily revert to the earlier state.
+
+Types of Version control:
+
+    Local version control systems
+    centralised version control systems
+    Distributed version control systems
+
+Important terminologies:
+
+    SCM (source code manager)
+    Repository  is a project directory which contains project related files or directories.
+    Working directory  
+    Check out   when the contents of the work is copies to the working directory
+    Staging area    it is a pre-committing area
+    Commit  
+    SHA     it is a unique ID 40 long character.
+    Branch  It is a new line of development
+
+
+Repository in GIT:
+    A software Repository is the centralised storage location for software packages
+    
+    Local Repository    which is a collection of files and directories placed in local systems
+
+    remote Repository   which is collection of files and directories placed in remote systems
+
+
+Creating a Repository:
+
+    Can be done in two ways
+
+        .   Initializing a Repository in local machine
+        .   Cloning a remote Repository
+
+    
+
+

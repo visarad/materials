@@ -108,6 +108,26 @@ Creating a Repository:
 
                 git checkout -b hr          creates and moves to new branch
                 
+<<<<<<< HEAD
+=======
+            deleting a branch
+
+                git branch -d hr    deletes the branch
+        
+
+        Merging:
+
+            Merging takes the contents of a source branch and integrates them with target branch
+            
+            in Merging, only the target branch is changed. The source branch history remains same.
+
+            .   Fast forward merge
+
+            .   Regular merge
+
+            
+
+>>>>>>> master
 
 
         

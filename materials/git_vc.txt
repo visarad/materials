@@ -124,8 +124,22 @@ Creating a Repository:
             .   Regular merge
 
             
-        
+            git merge hr master             merges hr branch with master
 
+        
+    Working with remote Repositories
+
+        List all remotes
+
+            git remote -v
+
+        add remotes
+
+            git remote add origin  https_link/sshlink
+
+        removing remotes
+
+            git remote remove  https://github.com/visarad/materials.git
 
     
 

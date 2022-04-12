@@ -72,7 +72,17 @@ Creating a Repository:
 
             Annotaed tags
             light weight tags
-            
+
+
+            git tag -a v0.0.1       creates tag for the Repository
+
+            after adding some files and folders you can create another tag 
+
+            git tag -a v0.0.2 
+
+            we can also delete the tags
+
+            git tag -a v0.0.1
 
 
         

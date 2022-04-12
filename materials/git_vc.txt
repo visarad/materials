@@ -63,7 +63,16 @@ Creating a Repository:
 
             git restore --staged   <file>.<ext>
 
-    
+
+        Tagging :
+
+            Tagging is a mechanism used to create a snap shot of git Repository.
+            Tagging is traditionally used to create semantic version number identifier tags 
+            that correspond to software release cycles.
+
+            Annotaed tags
+            light weight tags
+            
 
 
         

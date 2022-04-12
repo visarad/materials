@@ -58,7 +58,16 @@ Creating a Repository:
             above cones a Repository from git upon which you can do the further process.
 
         
+        To remove a file from staging area so as not to commit that file.
+
+
+            git restore --staged   <file>.<ext>
+
+    
+
+
         
+
 
     
 

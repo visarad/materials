@@ -36,6 +36,39 @@ Creating a Repository:
         .   Initializing a Repository in local machine
         .   Cloning a remote Repository
 
+        Initializing a Repository in local machine
+
+            mkdir sample
+            cd sample
+            git init        it initializes empty git Repository and .git/ folder is also created
+
+
+            git status      for checking the status of the Repository like which brach it is on,
+                                                        commits,  untracked files,  etc...
+            
+            git add .       adds files and folders to the Repository for later commits
+
+            git commit  -m  "message"           it commit the changes to the Repository
+
+
+        Cloning a Repository from remote or github
+
+            git clone   https://github.com/visarad/sample.git
+
+            above cones a Repository from git upon which you can do the further process.
+
+        
+        
+
     
+
+
+
+
+
+
+
+
+
 
 
